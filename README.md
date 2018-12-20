@@ -56,7 +56,7 @@ aws iam --region us-east-1 attach-role-policy --role-name ecsTaskExecutionRole -
 ecs-cli configure --cluster tutorial --region us-east-1 --default-launch-type FARGATE --config-name tutorial
 
 # Create a CLI profile using your access key and secret key:
-# Note: Replace a and a with your specific/desired values!
+# Note: Replace AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY with your specific/desired values!
 ecs-cli configure profile --access-key AWS_ACCESS_KEY_ID --secret-key AWS_SECRET_ACCESS_KEY --profile-name tutorial
 
 # Create an Amazon ECS cluster with the ecs-cli up command:
