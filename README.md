@@ -53,7 +53,7 @@ aws secretsmanager --region us-east-1 create-secret --name mySecrets \
     --secret-string file://secrets.json
 
 # Verify
-aws secretsmanager --region us-east-1 get-secret-value --secret-id frcSlackNotifierSecrets
+aws secretsmanager --region us-east-1 get-secret-value --secret-id mySecrets
 
 
 # Create the task execution role:
