@@ -41,7 +41,7 @@ ecs-cli --version
 ##### REF: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_Configuration.html
 
 
-## Optional (secrets example only, not used in this WordPress demo)
+## Optional: AWS Secrets Manager (not used in this WordPress demo)
 ```
 ################################################################################
 # OPTIONAL: Only if you want to setup "AWS Secrets Manager"
@@ -55,8 +55,10 @@ aws secretsmanager --region us-east-1 create-secret --name mySecrets \
 
 # Verify
 aws secretsmanager --region us-east-1 get-secret-value --secret-id mySecrets
-################################################################################
 
+# NOTE: Secrets can be used with ECS Fargate or Lambda and/or other
+#       AWS services instead of and/or in addition to environment variables
+################################################################################
 ```
 
 ## Deploy
