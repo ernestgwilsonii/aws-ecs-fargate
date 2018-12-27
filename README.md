@@ -41,9 +41,10 @@ ecs-cli --version
 ##### REF: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_Configuration.html
 
 
-## Deploy
+## Optional (secrets example only, not used in this WordPress demo)
 ```
 ################################################################################
+# OPTIONAL: Only if you want to setup "AWS Secrets Manager"
 # Edit file and set your specific values
 vi secrets.json
 
@@ -54,8 +55,13 @@ aws secretsmanager --region us-east-1 create-secret --name mySecrets \
 
 # Verify
 aws secretsmanager --region us-east-1 get-secret-value --secret-id mySecrets
+################################################################################
 
+```
 
+## Deploy
+```
+################################################################################
 # Create the task execution role:
 aws iam --region us-east-1 create-role --role-name ecsTaskExecutionRole --assume-role-policy-document file://task-execution-assume-role.json
 
